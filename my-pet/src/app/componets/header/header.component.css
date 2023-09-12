@@ -1,0 +1,22 @@
+.title-nav{
+  margin: 0 0 0 16px;
+}
+
+.mr-nav{
+  margin-right: 10px;
+}
+
+.fs-txt-nav{
+  font-size: 18px;
+}
+
+.btn-logout{
+  color: black;
+  background-color: rgba(255, 255, 255, 0.772);
+  padding: 3px 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  border: 1px solid;
+  /* border-left: 1px solid; */
+  border-radius: 7%;
+}

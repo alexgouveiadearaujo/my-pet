@@ -1,0 +1,16 @@
+<p>list-animals works!</p>
+<div class="btns">
+  <button (click)="allPets()">Animais para adoção</button>
+  <button (click)="myPetsPosted()">Minha área</button>
+</div>
+<!-- <div *ngIf="animals$ | async as animals">
+  <app-animal-photo-grid [animals]="animals"></app-animal-photo-grid>
+</div> -->
+<div *ngIf="isVisible && (allAnimals$ | async) as animals">
+  <p>Animais disponíveis para adoção</p>
+  <app-animal-photo-grid [animals]="animals"></app-animal-photo-grid>
+</div>
+<div *ngIf="!isVisible && (myPosts$ | async) as animalsPosted">
+  <p>Animais que você compartilhou</p>
+  <app-animal-photo-grid [animals]="animalsPosted"></app-animal-photo-grid>
+</div>

@@ -1,0 +1,28 @@
+<h4 class="text-center">Registre-se</h4>
+
+<form class="form mt-4" [formGroup]="newUserForm" (submit)="register()">
+  <div class="form-group mb-4">
+    <input class="form-control" placeholder="E-mail" formControlName="email"/>
+    <p *ngIf="newUserForm.get('email')?.errors?.['required'] && newUserForm.get('email')?.touched" class="text-danger">E-mail obrigatório</p>
+    <p *ngIf="newUserForm.get('email')?.errors?.['email'] && newUserForm.get('email')?.touched" class="text-danger">e-mail no formato incorreto</p>
+  </div>
+  <div class="form-group mb-4">
+    <input class="form-control" placeholder="Nome Completo" formControlName="fullName"/>
+    <p *ngIf="newUserForm.get('fullName')?.errors && newUserForm.get('fullName')?.touched" class="text-danger">nome incorreto</p>
+  </div>
+  <div class="form-group mb-4">
+    <input class="form-control" placeholder="Usuário" formControlName="userName"/>
+    <p *ngIf="newUserForm.get('userName')?.errors?.['lowerCase'] && newUserForm.get('userName')?.touched" class="text-danger">usuário deve conter apenas letras minúsculas</p>
+    <p *ngIf="newUserForm.get('userName')?.errors?.['userExists']" class="text-danger">usuário já existe</p>
+
+  </div>
+  <div class="form-group mb-4">
+    <input class="form-control" placeholder="Senha" formControlName="password"/>
+    <p *ngIf="newUserForm.errors?.['sameUsernameAndPassword']" class="text-danger">Senha deve ser diferente de usuário</p>
+  </div>
+
+  <button class="btn btn-primary btn-block w-100">Cadastro</button>
+
+</form>
+<p>Já é um usário? <a [routerLink]="['']">faça login</a></p>
+
