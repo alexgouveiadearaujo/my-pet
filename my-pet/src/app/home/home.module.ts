@@ -5,6 +5,7 @@ import { HomeComponent } from './home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewUserComponent } from './new-user/new-user.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { NewUserComponent } from './new-user/new-user.component';
     CommonModule,
     HomeRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    SharedModule
   ],
   exports: [
     HomeComponent
