@@ -19,21 +19,7 @@ export class ListAnimalsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.userService.returnUser().subscribe((user)=>{
-    //   const userName = user.name ?? '';
-    //   this.animalsService.userList(userName).subscribe((animals)=>{
-    //     this.animals = animals;
-    //   })
-    // })
-    // this.animals$ = this.userService.returnUser().pipe(
-    //   switchMap((user) => {
-    //     const userName = user.name ?? '';
-    //     return this.animalsService.userList(userName);
-    //   })
-    // );
-
-    //AO LOGAR APARECE TODOS
-    // this.allAnimals$ =  this.animalsService.listAllAnimals()
+    this.allAnimals$ =  this.animalsService.listAllAnimals()
   }
 
   myPetsPosted() {

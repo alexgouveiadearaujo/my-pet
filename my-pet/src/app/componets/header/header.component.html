@@ -1,11 +1,11 @@
 <header class="sticky-top">
-  <nav class="navbar navbar-light bg-info">
+  <nav class="navbar navbar-light">
     <p class="navbar-brand title-nav">MyPet</p>
     <div *ngIf="user$ | async as user">
       <div *ngIf="user.name; else login" >
         <i class="fa fa-user-circle mr-nav fs-txt-nav"></i>
-        <a class="mr-nav text-capitalize text-decoration-none text-dark fs-txt-nav">{{ user.name }}</a>
-        <button (click)="logout()" class="btn-logout">Logout</button>
+        <a class="mr-nav text-capitalize text-decoration-none text-dark fs-txt-nav">{{ user.name }}</a> |
+        <a (click)="logout()" class="btn-logout">Logout</a>
       </div>
     </div>
   </nav>
@@ -15,21 +15,3 @@
     </span>
   </ng-template>
 </header>
-
-<!-- <header class="sticky-top">
-  <div class="d-flex bg-info">
-    <p class="">MyPet</p>
-    <div *ngIf="user$ | async as user">
-      <div *ngIf="user.name; else login" >
-        <i class="fa fa-user-circle mr-1"></i>
-        <a class="mr-1">{{ user.name }}</a>
-        <a (click)="logout()">Logout</a>
-      </div>
-    </div>
-  </div>
-  <ng-template #login>
-    <span class="navbar-text">
-      <a [routerLink]="['']"> Login </a>
-    </span>
-  </ng-template>
-</header> -->

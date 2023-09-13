@@ -1,0 +1,11 @@
+.btn{
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: rgb(4, 102, 214);
+  color: white;
+  font-size: 20px;
+}
+
+.btn:active{
+  opacity: 0.7;
+}
