@@ -3,7 +3,7 @@
 </p>
 
 <div class="row">
-  <div *ngFor="let animal of animals" class="col-4">
+  <div *ngFor="let animal of animals" class="col-4 mb-3">
     <a [routerLink]="['/animals', animal.id]">
       <app-card>
         <app-animal

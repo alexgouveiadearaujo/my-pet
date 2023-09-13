@@ -1,6 +1,4 @@
 .container-home{
-  /* background-color: aqua; */
-  /* width: 100%; */
   height: 100vh;
-  background-image: url(../../assets/img/d4.jpg);
+  background-color: #fcfbe4;
 }

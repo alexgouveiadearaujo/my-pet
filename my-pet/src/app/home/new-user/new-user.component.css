@@ -1,0 +1,9 @@
+.container{
+  background-color: white;
+  box-shadow: 11px 10px 8px 0px rgba(0,0,0,0.2);
+  padding: 1.5rem;
+}
+
+.form-control:focus {
+  border-color: #FFC107;
+}
