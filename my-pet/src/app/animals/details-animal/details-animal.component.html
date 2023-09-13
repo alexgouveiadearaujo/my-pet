@@ -1,16 +1,24 @@
-<p>details-animal works!</p>
 <div class="bg-white border" *ngIf="animal$ | async as animal">
   <div class="row">
     <div class="col-lg-6">
-      <app-animal [url]="animal.url" [description]="animal.description"></app-animal>
+      <app-animal
+        [url]="animal.url"
+        [description]="animal.description"
+      ></app-animal>
     </div>
     <div class="col-lg-6">
       <small>
-        <p class="text-left break-word">{{animal.description}}</p>
-        <i class="fa fa-heart-o fa-2x mr-2 pull-left" (click)="like()">{{animal.likes}}</i>
-        <i class="fa fa-comment-o fa-2x mr-2 ml-2">{{animal.comments}}</i>
+        <p class="text-left break-word">{{ animal.description }}</p>
+        <i class="fa fa-heart-o fa-2x mr-2 pull-left" (click)="like()">{{
+          animal.likes
+        }}</i>
+        <i class="fa fa-comment-o fa-2x mr-2 ml-2">{{ animal.comments }}</i>
         <i class="fa fa-trash-o fa-2x pull-right" (click)="remove()"></i>
       </small>
+      <app-comments *ngIf="animal.allowComments; else warning" [id]="animalId" ></app-comments>
+      <ng-template #warning>
+        <p>Não pode ser comentado</p>
+      </ng-template>
     </div>
   </div>
 </div>

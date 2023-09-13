@@ -7,6 +7,8 @@ import { AnimalComponent } from './animal/animal.component';
 import { AnimalPhotoGridComponent } from './animal-photo-grid/animal-photo-grid.component';
 import { CardModule } from '../componets/card/card.module';
 import { DetailsAnimalComponent } from './details-animal/details-animal.component';
+import { CommentsComponent } from './details-animal/comments/comments.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,12 +16,14 @@ import { DetailsAnimalComponent } from './details-animal/details-animal.componen
     ListAnimalsComponent,
     AnimalComponent,
     AnimalPhotoGridComponent,
-    DetailsAnimalComponent
+    DetailsAnimalComponent,
+    CommentsComponent
   ],
   imports: [
     CommonModule,
     AnimalsRoutingModule,
-    CardModule
+    CardModule,
+    ReactiveFormsModule
   ]
 })
 export class AnimalsModule { }
