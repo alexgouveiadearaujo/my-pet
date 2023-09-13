@@ -31,19 +31,27 @@ export class AnimalsService {
   }
 
   like(id: number): Observable<boolean> {
-    return this.http.post(
-      `${API}/photos/${id}/like`,
-      {},
-      { observe: 'response' }
-    ).pipe(
-      // mapTo(true),
-      map(()=>true),
-      catchError((error)=>{
-        return error.status === NOT_MODIFIED ? of(false): throwError(error)
-      })
-    )
+    return this.http
+      .post(`${API}/photos/${id}/like`, {}, { observe: 'response' })
+      .pipe(
+        // mapTo(true),
+        map(() => true),
+        catchError((error) => {
+          return error.status === NOT_MODIFIED ? of(false) : throwError(error);
+        })
+      );
   }
 
+  upload(description: string, allowComments: boolean, file: File) {
+    const formData = new FormData();
+    formData.append('description', description);
+    formData.append('allowComments', allowComments ? 'true' : 'false');
+    formData.append('imageFile', file);
 
+    return this.http.post(`${API}/photos/upload`, formData, {
+      observe: 'events',
+      reportProgress: true,
+    });
+  }
 
 }

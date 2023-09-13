@@ -8,7 +8,8 @@ import { AnimalPhotoGridComponent } from './animal-photo-grid/animal-photo-grid.
 import { CardModule } from '../componets/card/card.module';
 import { DetailsAnimalComponent } from './details-animal/details-animal.component';
 import { CommentsComponent } from './details-animal/comments/comments.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
+import { NewAnimalComponent } from './new-animal/new-animal.component';
 
 
 @NgModule({
@@ -17,13 +18,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     AnimalComponent,
     AnimalPhotoGridComponent,
     DetailsAnimalComponent,
-    CommentsComponent
+    CommentsComponent,
+    NewAnimalComponent
   ],
   imports: [
     CommonModule,
     AnimalsRoutingModule,
     CardModule,
-    ReactiveFormsModule
+    SharedModule
   ]
 })
 export class AnimalsModule { }
