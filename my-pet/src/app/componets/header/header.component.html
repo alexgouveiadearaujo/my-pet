@@ -1,6 +1,6 @@
 <header class="sticky-top">
   <nav class="navbar navbar-light">
-    <p class="navbar-brand title-nav">MyPet</p>
+    <a class="navbar-brand title-nav" [routerLink]="['/animals']">MyPet</a>
     <div *ngIf="user$ | async as user">
       <div *ngIf="user.name; else login" >
         <i class="fa fa-user-circle mr-nav fs-txt-nav"></i>
