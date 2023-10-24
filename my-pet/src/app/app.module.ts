@@ -8,9 +8,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderModule } from './componets/header/header.module';
 import { FooterModule } from './componets/footer/footer.module';
 import { AuthenticationModule } from './authentication/authentication.module';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, InfoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
