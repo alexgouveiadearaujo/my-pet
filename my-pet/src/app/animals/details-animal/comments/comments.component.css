@@ -2,3 +2,44 @@
   height: 50vh;
   overflow: auto;
 }
+
+.div-comments{
+  margin-right: 10px;
+}
+.div-comment{
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 12px;
+  background-color: #FCDB79;
+}
+
+
+.btn-comment{
+  color: black;
+  background-color: #FFC107;
+  /* margin: 0 25px 20px; */
+}
+
+.comment-name::first-letter{
+  text-transform: uppercase;
+}
+.comment-name{
+  margin: 0;
+  margin-right: 10px;
+  align-items: center;
+}
+.comment-date{
+  font-size: 12px;
+  margin: 0;
+  display: flex;
+  justify-content: end;
+}
+.comment-txt{
+
+}
+
+.div-name-date{
+  align-items: center;
+}
+
