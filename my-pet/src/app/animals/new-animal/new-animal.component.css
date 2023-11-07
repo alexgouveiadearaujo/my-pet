@@ -3,3 +3,9 @@
   height: 100vh;
   background-color: #fcfbe4;
 }
+
+.btn{
+  color: black;
+  background-color: #FFC107;
+  margin-right: 15px;
+}

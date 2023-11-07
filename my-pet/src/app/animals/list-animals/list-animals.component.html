@@ -3,7 +3,7 @@
     <button (click)="allPets()" class="m-2 btn">Animais para adoção</button>
     <button (click)="myPetsPosted()" class="m-2 btn">Minha área</button>
     <button  class="m-2 btn" [routerLink]="['new']">Quero doar</button>
-    <button  class="m-2 btn" [routerLink]="['','info']">Informações</button>
+    <button  class="m-2 btn" [routerLink]="['','info']">Se informe</button>
   </div>
   <div *ngIf="isVisible && (allAnimals$ | async) as animals">
     <h3 class="d-flex justify-content-center mt-2 mb-3">
@@ -15,9 +15,6 @@
     <h3 class="d-flex justify-content-center mt-2 mb-3">
       Animais que você compartilhou
     </h3>
-    <a class="d-flex justify-content-center" [routerLink]="['new']"
-      >Quero doar</a
-    >
     <app-animal-photo-grid [animals]="animalsPosted"></app-animal-photo-grid>
   </div>
 </div>
